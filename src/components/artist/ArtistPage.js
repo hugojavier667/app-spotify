@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Axios from "axios";
 import ArtistTopTracks from "./ArtistTopTracks";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ArtistsPage({history, location, match}) {
   const [artist, setArtist] = useState(null);
@@ -52,6 +53,10 @@ function ArtistsPage({history, location, match}) {
           alt='...'
           style={{ maxWidth: '80%' }}
         />
+        <div class='d-flex justify-content-center mt-2'>
+          <p className="mr-2">{artist.followers.total}</p>
+          <FontAwesomeIcon icon='user-friends' color='white' />
+        </div>
       </div>
       <div className='col-6'>
         <h1>{artist.name}</h1>

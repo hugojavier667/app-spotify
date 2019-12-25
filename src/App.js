@@ -10,6 +10,8 @@ import Axios from "axios";
 import AlbumsPage from "./components/album/AlbumsPage";
 import ArtistPage from "./components/artist/ArtistPage";
 import AlbumDetailsPage from "./components/album/AlbumDetailsPage";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faUserFriends, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const qs = require("querystring");
 
@@ -53,6 +55,9 @@ const login = () => {
 };
 
 function App() {
+
+  library.add(faUserFriends);
+  
   useEffect(() => {
       login();
   });

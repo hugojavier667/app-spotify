@@ -7,7 +7,7 @@ const ArtistTopTracks = ({tracks, listSize}) => {
             <h2>Top tracks</h2>
             {tracks.splice(0, listSize).map(track => (
                 <div key={track.id} className="d-flex mb-2 align-middle align-content-between">
-                    <img src={track.album.images[0].url} className="mr-2" alt="..." style={{maxHeight: "3rem"}}/>
+                    <img src={track.album.images.reverse()[0].url} className="mr-2" alt="..." style={{maxHeight: "3rem"}}/>
                     <p className="">{track.name}</p>
                     <p className="ml-auto">{msToTime(track.duration_ms)}</p>
                 </div>

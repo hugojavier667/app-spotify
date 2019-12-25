@@ -68,8 +68,8 @@ function ArtistsPage({history, location, match}) {
         <h3>Albums</h3>
         <ul>
           {artistAlbums.map(album => (
-            <NavLink to={/albums/ + album.id}>
-              <li key={album.id}>{album.name}</li>
+            <NavLink to={/albums/ + album.id} key={album.id}>
+              <li>{album.name}</li>
             </NavLink>
           ))}
         </ul>

@@ -7,9 +7,9 @@ import SearchPage from "./components/SearchPage";
 import NotFound from "./components/NotFound";
 import ls from "local-storage";
 import Axios from "axios";
-import AlbumsPage from "./components/AlbumsPage";
-import ArtistPage from "./components/ArtistPage";
-import AlbumDetailsPage from "./components/AlbumDetailsPage";
+import AlbumsPage from "./components/album/AlbumsPage";
+import ArtistPage from "./components/artist/ArtistPage";
+import AlbumDetailsPage from "./components/album/AlbumDetailsPage";
 
 const qs = require("querystring");
 

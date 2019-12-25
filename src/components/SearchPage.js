@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import Axios from "axios";
-import ArtistCard from "./ArtisCard";
+import ArtistCard from "./artist/ArtisCard";
 
 function SearchPage(props) {
     const [searchResult, setSearchResult] = useState([]);

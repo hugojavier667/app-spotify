@@ -1,5 +1,5 @@
 import React from 'react';
-import { msToTime } from './utils';
+import { msToTime } from '../utils';
 
 const AlbumTracksList = ({tracks}) => {
     return (

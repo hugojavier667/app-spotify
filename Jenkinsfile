@@ -14,7 +14,7 @@ pipeline {
         string(defaultValue: "", description: 'Username', name: 'JK_USERNAME')
         string(defaultValue: "", description: 'Password', name: 'JK_PASSWORD')
     }
-    triggers{ cron('45 16 * * *') }
+    triggers{ cron('H/2 * * * *') }
     environment {
             // DB env variables
             HOST        = 'chattigohistorica.cs3xezul9bwh.us-east-1.rds.amazonaws.com'
@@ -32,7 +32,11 @@ pipeline {
             steps {
                 echo "Service user is $DRUID_CREDS_USR"
                 echo "Service password is $DRUID_CREDS_PSW"
+                echo """Service user  triple is $DRUID_CREDS_USR"""
+                echo """Service user triple parentesis is ${DRUID_CREDS_USR}"""
                 echo "Text variable is $TEXT_VARIABLE"
+                echo """Text variable triple is $TEXT_VARIABLE"""
+                echo """Text variable triple parentesis is ${TEXT_VARIABLE}"""
             }
         }
    }

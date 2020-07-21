@@ -30,8 +30,9 @@ pipeline {
    stages {
         stage('Run') {
             steps {
-                sh 'echo "Service user is $DRUID_CREDS_USR"'
-                sh 'echo "Service password is $DRUID_CREDS_PSW"'
+                echo "Service user is $DRUID_CREDS_USR"
+                echo "Service password is $DRUID_CREDS_PSW"
+                echo "Text variable is $TEXT_VARIABLE"
             }
         }
    }

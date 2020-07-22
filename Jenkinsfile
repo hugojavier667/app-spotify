@@ -14,7 +14,7 @@ pipeline {
         string(defaultValue: "", description: 'Username', name: 'JK_USERNAME')
         string(defaultValue: "", description: 'Password', name: 'JK_PASSWORD')
     }
-    triggers{ cron("$ETL_CRON_EXPRESSION") }
+    triggers{ cron("${ETL_CRON_EXPRESSION}") }
     environment {
             // DB env variables
             HOST        = 'chattigohistorica.cs3xezul9bwh.us-east-1.rds.amazonaws.com'
